@@ -1095,9 +1095,6 @@ nav .top-header {
     font-size: 15px;
     font-weight: 500;
   }
-  .mega-item-text::before {
-    content: "- ";
-  }
   .mega-menu .container {
     padding: 0;
   }
