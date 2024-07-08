@@ -1,0 +1,145 @@
+.clients-reviews {
+  padding: 75px 0;
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after,
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after {
+    content: "";
+  }
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+    &:hover {
+      i {
+        color: $main-color;
+      }
+    }
+    i {
+      transition: color linear 0.2s;
+      font-size: 20px;
+      color: #999999;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    right: -50px;
+    left: unset;
+  }
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    left: -50px;
+    right: unset;
+  }
+}
+.clients-review-title {
+  color: #0a081c;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 35px;
+}
+.client-review {
+  background-color: #ffffff;
+  border: 1px solid #f2f2f2;
+  padding: 25px;
+}
+.name-date {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.review-date {
+  font-size: 12px;
+  color: #999999;
+  font-weight: 500;
+  margin: 0;
+  margin-inline-start: 17px;
+}
+.client-name {
+  font-size: 14px;
+  line-height: 28px;
+  color: #0a081c;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stars {
+  margin-bottom: 12px;
+  i {
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #cccccc;
+  }
+  .active {
+    color: #e3b410;
+  }
+}
+.review-text {
+  font-size: 13px;
+  line-height: 24px;
+  color: #808080;
+  font-weight: 400;
+  margin: 0;
+}
+
+@include max-1200 {
+  .client-review {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}
+
+@include max-992 {
+  .clients-reviews .swiper-button-next,
+  .clients-reviews .swiper-button-prev {
+    display: none;
+  }
+  .clients-reviews .swiper-horizontal > .swiper-pagination-bullets,
+  .clients-reviews .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .clients-reviews .swiper-pagination-custom,
+  .clients-reviews .swiper-pagination-fraction {
+    display: block;
+    bottom: -45px;
+  }
+  .clients-reviews {
+    .swiper-pagination-bullet-active {
+      background: $main-color;
+    }
+  }
+}
+
+@include max-768 {
+  .client-review {
+    padding: 15px;
+  }
+  .clients-reviews {
+    padding: 50px 0 70px 0;
+  }
+  .clients-reviews .swiper-horizontal > .swiper-pagination-bullets,
+  .clients-reviews .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .clients-reviews .swiper-pagination-custom,
+  .clients-reviews .swiper-pagination-fraction {
+    display: block;
+    bottom: -35px;
+  }
+  .clients-review-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .stars {
+    margin-bottom: 10px;
+  }
+  .review-text {
+    line-height: 1.7;
+  }
+}

@@ -1,0 +1,49 @@
+.categories {
+  padding-top: 50px;
+}
+.cats-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.cat-item {
+  display: flex;
+  width: 100%;
+  aspect-ratio: 360 / 190;
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@include max-992 {
+  .cats-parent {
+    gap: 20px;
+  }
+}
+
+@include max-768 {
+  .categories {
+    padding-top: 40px;
+  }
+  .cats-parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cats-parent {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .cat-item {
+    width: calc(50% - 6px);
+  }
+}
