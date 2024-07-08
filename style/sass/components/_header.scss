@@ -104,7 +104,7 @@ font-weight: 500;
   padding-inline: 20px;
   height: 28px;
   border-radius: 14px;
-  background-color: transparent;
+  background-color: #1974ad;
   border: 2px solid #1974ad;
   position: absolute;
   inset-inline-end: 7px;
@@ -116,24 +116,9 @@ font-weight: 500;
   overflow: hidden;
   z-index: 2;
   font-weight: 700;
-  &::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1974ad;
-    transform: scale(1);
-    z-index: -1;
-    transition: all .3s;
-    border-radius: 14px;
-  }
-
   &:hover {
     color: #1974ad;
-    &::after{
-      transform: scale(0);
-    }
+    background-color: transparent;
   }
 
 }
